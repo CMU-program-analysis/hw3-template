@@ -1,0 +1,6 @@
+(ocamlyacc (modules parser))
+(ocamllex (modules lexer))
+
+(library
+ (name while3addr)
+ (libraries core while))

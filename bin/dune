@@ -1,0 +1,19 @@
+(executables
+ (libraries core analysis while3addr)
+ (modules analyze)
+ (names analyze))
+
+(executables
+ (libraries core while)
+ (modules while)
+ (names while))
+
+(executables
+ (libraries core while while3addr)
+ (modules compile)
+ (names compile))
+
+(executables
+ (libraries while while3addr analysis)
+ (modules w3a)
+ (names w3a))

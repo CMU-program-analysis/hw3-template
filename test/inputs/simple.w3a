@@ -1,0 +1,7 @@
+1: x := 0
+2: y := 1
+3: if x = 0 goto 6
+4: print y
+5: goto 7
+6: print x
+7: halt
