@@ -1,7 +1,10 @@
 # Instructions
 
 - Install [opam](https://opam.ocaml.org/doc/Install.html) (these instructions
-  assume opam version 2+)
+  assume opam version 2+).
+  If you are using Windows, it is highly recommended that
+  you use Windows Subsystem for Linux (WSL). More detailed instructions on how 
+  to install opam on WSL can be found [here](https://github.com/janestreet/install-ocaml)
 - Create a new switch (you can replace "homework" with any switch name you'd like):
 ```
 opam init
