@@ -21,6 +21,9 @@ opam install core dune merlin ounit2
   All of these binaries take input on stdin and output on stdout (i.e., you can
   run a While program by running `./while < program.while`, *not* by passing a
   file as input).
+  
+ - Test with `make test`. This will run any test cases placed in `test/test_analysis.ml`. There are a few test cases      already provided in the `test_analysis.ml` file to help you get started with testing your code. We highly suggest that
+   you add more cases!
 
 # Resources
 
