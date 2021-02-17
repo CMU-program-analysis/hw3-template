@@ -22,8 +22,11 @@ opam install core dune merlin ounit2
   run a While program by running `./while < program.while`, *not* by passing a
   file as input).
   
- - Test with `make test`. This will run any test cases placed in `test/test_analysis.ml`. There are a few test cases      already provided in the `test_analysis.ml` file to help you get started with testing your code. We highly suggest that
-   you add more cases!
+ - Test with `make test`. This will run any test cases placed in `test/test_analysis.ml`. There are a few test cases      already provided in the `test_analysis.ml` file to help you get started with testing your code and we highly suggest that
+   you add more!
+
+# Handin
+Handin *only* `src/analysis/df.ml` to Gradescope to run your code against a set of held out test cases.
 
 # Resources
 
@@ -31,7 +34,7 @@ opam install core dune merlin ounit2
   differences between OCaml and SML: http://adam.chlipala.net/mlcomp/
 - This page has a nice side-by-side comparison of the syntax of SML and OCaml:
   https://people.mpi-sws.org/~rossberg/sml-vs-ocaml.html
-- We are using the [Core library](https://opensource.janestreet.com/core/)
+- We are using the [Core library](https://ocaml.janestreet.com/ocaml-core/latest/doc/base/Base/index.html)
   maintained by Jane Street as it is more feature-rich than the OCaml standard
   library. The API documentation on that page should be useful.
 - If you're using Vim or Emacs, [Merlin](https://ocaml.github.io/merlin/) is a
