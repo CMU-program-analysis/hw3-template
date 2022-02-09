@@ -68,19 +68,19 @@ let run_analysis code expected_results =
 
 let test_simple _ =
   let code =
-    "1: x := 0\n2: y := 0\n3: if x = 0 goto 6\n4: print y\n5: goto 7\n6: print x\n7: halt"
+    "1: x := 1\n2: y := 1\n3: x := x - y\n4: if x = 0 goto 7\n5: print y\n6: goto 8\n7: print x\n8: halt"
   in
   let expected_results =
-    "Results before node n\n1: [ x = Top; y = Top; ]\n2: [ x = Z; y = Top; ]\n3: [ x = Z; y = Z; ]\n4: [ x = Top; y = Z; ]\n5: [ x = Top; y = Z; ]\n6: [ x = Z; y = Z; ]\n7: [ x = Top; y = Z; ]"
+    "Results before node n\n1: [ x = Top; y = Top; ]\n2: [ x = Pos; y = Top; ]\n3: [ x = Pos; y = Pos; ]\n4: [ x = Top; y = Pos; ]\n5: [ x = Top; y = Pos; ]\n6: [ x = Top; y = Pos; ]\n7: [ x = Z; y = Pos; ]\n8: [ x = Top; y = Pos; ]"
   in
   run_analysis code expected_results
 
 let test_infloop _ =
   let code =
-    "1: x := 0\n2: if x = 0 goto 5\n3: print x\n4: goto 6\n5: goto 2\n6: halt"
+    "1: x := 0\n2: if x < 0 goto 6\n3: x := 1\n4: print x\n5: goto 2\n6: halt"
   in
   let expected_results =
-    "Results before node n\n1: [ x = Top; ]\n2: [ x = Z; ]\n3: [ x = Top; ]\n4: [ x = Top; ]\n5: [ x = Z; ]\n6: [ x = Top; ]"
+    "Results before node n\n1: [ x = Top; ]\n2: [ x = Top; ]\n3: [ x = Top; ]\n4: [ x = Pos; ]\n5: [ x = Pos; ]\n6: [ x = Neg; ]"
   in
   run_analysis code expected_results
 
