@@ -5,10 +5,10 @@
   If you are using Windows, it is highly recommended that
   you use Windows Subsystem for Linux (WSL). More detailed instructions on how 
   to install opam on WSL can be found [here](https://github.com/janestreet/install-ocaml)
-- Create a new switch (you can replace "homework" with any switch name you'd like):
+- Create a new switch using OCaml 4.14.0 (you can replace "homework" with any switch name you'd like; it's likely the code will work with other versions but we have only confirmed it works in 4.09.0 and 4.14.0)
 ```
 opam init
-opam switch create homework 4.09.0
+opam switch create homework 4.14.0
 eval $(opam env)
 ```
 - Install dependencies:
